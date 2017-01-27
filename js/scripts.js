@@ -30,6 +30,7 @@ $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event){
     event.preventDefault();
 
+
     var selectedCrust = $("#crustPick").val();
     var selectedSize = $("#sizePick").val();
     var selectedTopping = $("input:checkbox[name=topping]:checked");
@@ -39,9 +40,6 @@ $(document).ready(function() {
 
     $("#result").append("<h2>" + "Your pizza order is: " + "</h2>" + "<h4>" + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for  " + newPizza.fullOrder() + " dollars." + "</h4>");
 
-    $("input#crust").val("");
-    $("input#size").val("");
-    $("input#topping").val("");
 
     $("#result").fadeIn(newPizza);
 
