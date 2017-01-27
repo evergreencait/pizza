@@ -1,80 +1,58 @@
-//back-end logic
-var pizzaArray = [];
-
-function Pizza (size, crust) {
-  this.size = size,
-  this.crust = crust,
-  pizzaArray.push(this)
+//business logic
+function Pizza(crust, size, topping, price) {
+  this.selectedCrust = crust;
+  this.selectedSize = size;
+  this.selectedTopping = topping;
+  this.price = 15;
 }
 
-var smallPizza = new Pizza("Small Pizza", ["thin", "stuffed-crust", "gluten-free"]);
-var mediumPizza = new Pizza("Medium Pizza", ["thin", "stuffed-crust", "gluten-free"]);
-var largePizza = new Pizza("Large Pizza", ["thin", "stuffed-crust", "gluten-free"]);
-
-var glutenFree = "gluten-free"
-var stuffed = "stuffed-crust"
-var bacon = "Bacon"
-var sausage = "Sausage"
-
-
-function calculatePrice(time, age, title) {
-  var price = 14;
-  if (topping === bacon) {
-    price += 4;
+Pizza.prototype.fullOrder = function() {
+  if (selectedCrust === Stuffed) {
+    this.price += 3;
+  } if (selectedCrust === Thin) {
+    this.price += 3;
+  } if (selectedSize === X-Large) {
+    this.price += 3;
+  } if (selectedSize === Large) {
+    this.price +=2;
+  } if (selectedTopping === Pepperoni) {
+    this.price +=2;
   }
-  else if (topping === sausage) {
-    price += 4;
-  }
-  else if (crust === stuffed) {
-    price += 2;
-  }
-  else if (crust === gluten-free) {
-    price += 2;
-  }
-  else {
-    price -=1;
-  }
-  return price;
+    else {
+      this.price -=1;
+    }
+    return this.price;
 }
 
-
-
-
-
-//front-end logic
+//user interface logic
 $(document).ready(function() {
-  var chosenPizza = new Pizza("", []);
-  for (i = 0; i < pizzaArray.length; i++) {
-    var thisPizza = "";
-    thisPizza += "<ul>";
-    thisPizza += ("<h3>" + pizzaArray[i].size + "</h3>");
-    for (show = 0; show < pizzaArray[i].crust.length; show++) {
-   thisPizza += ("<li>" +  pizzaArray[i].crust[show] + "</li>");
-  }
-    thisPizza += "</ul>"
-    $(".pizzaListing").append(thisPizza);
-  }
+  $("form#pizzaOrder").submit(function(event){
+    event.preventDefault();
 
-  $("li").click(function() {
-    chosenPizza.crust = (this.textContent);
-    chosenPizza.size = ($(this).parent().children(":first-child").text());
+    var inputtedCrust = $("input#crust").val();
+    var inputtedSize = $("input#size").val();
+    var inputtedTopping = $("input#topping").val();
 
-    $("pizzaListing").hide();
-    $(".toppingQuestion").show();
-    $(".toppingQuestion").append("");
+    var newPizza = new Pizza(inputtedCrust, inputtedSize, inputtedTopping);
+
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
+
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
 
 
+
+    allTasks.forEach(function(task) {
+      var userInput = $("input#" + task).val();
+      $("#toDoList").append("<li class='striker'>" + userInput + "</li>");
+    });
+
+    allTasks.forEach(function(task) {
+      var userInput = $("input#" + task).val();
+      $(".striker").click(function() {
+      $(this).toggleClass("strike");
+    });
   });
 
-$("form").submit(function(event) {
-  event.preventDefault();
-  chosenPizza.topping = ($("#topSelect").val());
 
-  var finalPrice = calculatePrice(pizzaMovie.size, chosenPizza.crust, chosenPizza.topping);
-
-  $(".result").text(finalPrice);
-});
-
-console.log(chosenPizza);
-
-});
+   $("#results").append("<li><span class='order'>" + newContact.fullOrder + "</span></li>");

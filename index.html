@@ -8,35 +8,57 @@
   <meta charset="utf-8">
   <title>Pizza</title>
 </head>
-<body class = "container">
-  <h1 class = "jumbotron">Pizza Pizza!</h1>
+<body>
+  <div class = "container">
+    <h1 class = jumbotron>Pizza Pizza!</h1>
 
-  <div>
+    <div class = "row">
+      <div class = "col-md-6">
+        <form id = "pizzaOrder">
+          <h2>What kind of crust do you want?</h2>
+          <select class="form-control" id="crust">
+            <option></option>
+            <option>Thin</option>
+            <option>Stuffed</option>
+            <option>Gluten free</option>
+            <option>Whole Wheat</option>
+          </select>
 
-    <div class = "pizzaListing">
+          <h2>What size do you want?</h2>
+          <select class="form-control" id="size">
+            <option></option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>X-large</option>
+          </select>
 
-    </div>
+          <h2>What topping do you want?</h2>
+          <select class="form-control" id="topping">
+            <option></option>
+            <option>Olives</option>
+            <option>Pineapple</option>
+            <option>Pepper</option>
+            <option>Pepperoni</option>
+          </select>
+          <div class = "button">
+            <button type= "submit" class="btn">Get your order!</button>
+          </div>
+        </form>
 
-  </div>
 
-  <div class="toppingQuestion">
-    <form>
-      <div class="form-group">
-        <h2>What topping would you like?</h2>
-        <select class="form-control" id="topSelect">
-          <option></option>
-          <option>Sausage</option>
-          <option>Bacon</option>
-          <option>Peppers</option>
-          <option>Olives</option>
-        </select>
       </div>
-      <button class="submit">Submit</button>
-    </form>
+      <div class="col-md-6">
+        <div id="show-order">
+          <h2>Your Order:</h2>
+          <ul id="orderDetails">
+          </ul>
+          <h2></h2>
 
+          <div id = "result">
+          </div>
 
-
-  <div class = "result"></div>
-
-  </body>
-  </html>
+        </div>
+      </div>
+    </body>
+    </html>
