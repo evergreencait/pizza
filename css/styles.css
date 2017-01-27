@@ -5,3 +5,20 @@
 #result {
   display: none;
 }
+
+.jumbotron {
+  background-image: url("http://lot66.ca/wp-content/uploads/2014/06/pizza.jpg");
+  padding-bottom: 200px;
+  background-position: center;
+  color: white;
+  font-size: 100px;
+}
+
+body {
+  background-color: #C0C0C0;
+}
+
+img.menu {
+  height: 75px;
+  width: 120px;
+}
