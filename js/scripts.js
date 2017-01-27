@@ -15,8 +15,11 @@ function Pizza(crust, size, topping, price) {
 // }
 
 Pizza.prototype.fullOrder = function() {
-  if (this.selectedCrust === crustArray[0]) {
+  if ((this.selectedCrust === crustArray[0]) || (this.selectedCrust === crustArray[1])) {
      this.price += 3;
+   }
+   if ((this.selectedSize === sizeArray[0]) || (this.selectedSize === sizeArray[1])) {
+     this.price +=4
    }
    return this.price
 }
