@@ -1,0 +1,24 @@
+.jumbotron {
+  font-family: 'Limelight', cursive;
+  font-size: 60px;
+  }
+
+
+li {
+  list-style: none;
+  font-size: 20px;
+
+}
+
+h3 {
+  font-size: 40px;
+
+}
+
+.red {
+  color: red;
+}
+
+.toppingQuestion {
+  display: none;
+}

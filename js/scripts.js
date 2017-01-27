@@ -17,7 +17,7 @@ var bacon = "Bacon"
 var sausage = "Sausage"
 
 
-function calculatePrice(size, crust, topping) {
+function calculatePrice(time, age, title) {
   var price = 14;
   if (topping === bacon) {
     price += 4;
@@ -41,14 +41,40 @@ function calculatePrice(size, crust, topping) {
 
 
 
-}
-
-
-
-
-
-
-
-
-
 //front-end logic
+$(document).ready(function() {
+  var chosenPizza = new Pizza("", []);
+  for (i = 0; i < pizzaArray.length; i++) {
+    var thisPizza = "";
+    thisPizza += "<ul>";
+    thisPizza += ("<h3>" + pizzaArray[i].size + "</h3>");
+    for (show = 0; show < pizzaArray[i].crust.length; show++) {
+   thisPizza += ("<li>" +  pizzaArray[i].crust[show] + "</li>");
+  }
+    thisPizza += "</ul>"
+    $(".pizzaListing").append(thisPizza);
+  }
+
+  $("li").click(function() {
+    chosenPizza.crust = (this.textContent);
+    chosenPizza.size = ($(this).parent().children(":first-child").text());
+
+    $("pizzaListing").hide();
+    $(".toppingQuestion").show();
+    $(".toppingQuestion").append("");
+
+
+  });
+
+$("form").submit(function(event) {
+  event.preventDefault();
+  chosenPizza.topping = ($("#topSelect").val());
+
+  var finalPrice = calculatePrice(pizzaMovie.size, chosenPizza.crust, chosenPizza.topping);
+
+  $(".result").text(finalPrice);
+});
+
+console.log(chosenPizza);
+
+});

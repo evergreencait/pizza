@@ -19,16 +19,20 @@
 
   </div>
 
-  <form id = "toppingQuestion">
-    <div class = "form group">
-      <h4>What kind of toppings would you like?</h4>
-      <input type="checkbox" name="topping" value="Olives">Olives</br>
-      <input type="checkbox" name="topping" value="Peppers">Peppers</br>
-      <input type="checkbox" name="topping" value="Bacon">Bacon</br>
-      <input type="checkbox" name="topping" value="Sausage">Sausage</br>
-    </div>
-    <button type="button" class="btn btn-danger">Get your pizza!</button>
-  </form>
+  <div class="toppingQuestion">
+    <form>
+      <div class="form-group">
+        <h2>What topping would you like?</h2>
+        <select class="form-control" id="topSelect">
+          <option></option>
+          <option>Sausage</option>
+          <option>Bacon</option>
+          <option>Peppers</option>
+          <option>Olives</option>
+        </select>
+      </div>
+      <button class="submit">Submit</button>
+    </form>
 
 
 
