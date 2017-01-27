@@ -1,4 +1,8 @@
 //business logic
+var toppingArray = ["Bacon", "Sausage"];
+var crustArray = ["Gluten-free crust", "Whole Wheat crust"];
+var sizeArray = ["Large", "X-Large"]
+
 function Pizza(crust, size, topping, price) {
   this.selectedCrust = crust;
   this.selectedSize = size;
@@ -6,8 +10,15 @@ function Pizza(crust, size, topping, price) {
   this.price = 15;
 }
 
+// Pizza.prototype.fullOrder = function() {
+//   return this.selectedCrust + " " + this.selectedSize + " " + this.selectedTopping;
+// }
+
 Pizza.prototype.fullOrder = function() {
-  return this.selectedCrust + " " + this.selectedSize + " " + this.selectedTopping;
+  if (this.selectedCrust === crustArray[0]) {
+     this.price += 3;
+   }
+   return this.price
 }
 
 //user interface logic
