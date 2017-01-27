@@ -43,3 +43,20 @@ h2 {
 .btn-primary {
   font-size: 40px;
 }
+
+#crustPick {
+  width: 25%;
+}
+
+#sizePick {
+  width: 25%;
+}
+
+#saucePick {
+  width: 25%;
+}
+
+img {
+  border-radius: 30%;
+
+}

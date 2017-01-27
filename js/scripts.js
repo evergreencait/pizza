@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(selectedCrust, selectedSize, selectedSauce);
 
-    $("#result").append("<h2>" + "Your pizza order is: " + "</h2>" + "<h3>" + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for  " + newPizza.fullOrder() + " dollars." + "</h3>");
+    $("#result").append("<h1>" + "Your pizza order is: " + "</h1>" + "<h2>" + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for  " + newPizza.fullOrder() + " dollars." + "</h2>");
 
 
     $("#result").fadeIn(newPizza);
