@@ -37,12 +37,13 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(selectedCrust, selectedSize, selectedSauce);
 
-    $("#result").append("Your pizza order is: " + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for:  " + newPizza.fullOrder() + " dollars");
+    $("#result").append("Your pizza order is: " + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for:  " + newPizza.fullOrder() + " dollars.");
 
     $("input#crust").val("");
     $("input#size").val("");
     $("input#topping").val("");
 
+    $("#result").fadeIn(newPizza);
 
   });
 });
