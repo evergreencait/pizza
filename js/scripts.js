@@ -18,9 +18,24 @@ var sausage = "Sausage"
 
 
 function calculatePrice(size, crust, topping) {
-  var price = 12;
-  if (topping)
-
+  var price = 14;
+  if (topping === bacon) {
+    price += 4;
+  }
+  else if (topping === sausage) {
+    price += 4;
+  }
+  else if (crust === stuffed) {
+    price += 2;
+  }
+  else if (crust === gluten-free) {
+    price += 2;
+  }
+  else {
+    price -=1;
+  }
+  return price;
+}
 
 
 
