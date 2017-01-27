@@ -11,22 +11,25 @@
 </head>
 <body>
   <div class = "container">
-    <div class = "jumbotron">Pizza Pizza!</div>
+    <div class = "jumbotron">Pizza Pizza!
+      <h2>Nom, nom, nom</h2>
+    </div>
 
-
+<!-- additional costs -->
     <img src = "img/menu2.jpg" alt = "picture of a menu sign" class="menu">
     <h2>Additional Costs:</h2>
-      <ul>
-        <li>Gluten-free or Whole wheat crust: 3 dollars more</li>
-        <li>Large or X-Large size: 4 dollars more</li>
-        <li>Pesto or Alfredo Sauce: 4 dollars more</li>
-      </ul>
+    <ul>
+      <li>Gluten-free or Whole wheat crust: 3 dollars more</li>
+      <li>Large or X-Large size: 4 dollars more</li>
+      <li>Pesto or Alfredo Sauce: 4 dollars more</li>
+    </ul>
 
+<!-- selections -->
     <div class = "row">
       <div class = "col-md-6">
         <form id = "pizzaOrder">
           <h2>What kind of crust?</h2>
-          <select class="form-control" id="crustPick">
+          <select class="form-control" id="crustPick" required>
             <option></option>
             <option>Thin crust</option>
             <option>Stuffed crust</option>
@@ -35,7 +38,7 @@
           </select>
 
           <h2>What size?</h2>
-          <select class="form-control" id="sizePick">
+          <select class="form-control" id="sizePick" required>
             <option></option>
             <option>Small Pizza</option>
             <option>Medium Pizza</option>
@@ -44,7 +47,7 @@
           </select>
 
           <h2>What kind of sauce?</h2>
-          <select class="form-control" id="saucePick">
+          <select class="form-control" id="saucePick" required>
             <option></option>
             <option>Tomato Sauce</option>
             <option>Pesto Sauce</option>
@@ -65,21 +68,25 @@
           </div>
         </form>
 
-
+<!-- result div -->
       </div>
     </div>
-  <div id = "result">
-    <div class = "row">
-    <div class="col-md-6">
-        <h2>Your Order:</h2>
-        <div class = "pizzaImg">
-          <img src= "img/pizzacall.jpg" alt= "Image of pizza batcall">
+    <div id = "result">
+      <div class = "row">
+        <div class="col-md-6">
+          <h2>Your Order:</h2>
+          <div class = "pizzaImg">
+            <img src= "img/pizzacall.jpg" alt= "Image of pizza batcall">
+          </div>
+          <div class = "refresh">
+          </div>
         </div>
-        <div class = "refresh">
-        <input type="button" value="Clear order" onClick="window.location.reload()">
-      </div>
       </div>
     </div>
+
+  <!-- refresh button -->
+    <div class = "clear">
+    <input type="button" value="Clear order" onClick="window.location.reload()">
   </div>
   </div>
 </body>

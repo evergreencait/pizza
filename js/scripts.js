@@ -30,7 +30,6 @@ $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event){
     event.preventDefault();
 
-
     var selectedCrust = $("#crustPick").val();
     var selectedSize = $("#sizePick").val();
     var selectedTopping = $("input:checkbox[name=topping]:checked");
@@ -42,6 +41,7 @@ $(document).ready(function() {
 
 
     $("#result").fadeIn(newPizza);
+    $(".clear").fadeIn(newPizza);
 
   });
 });
