@@ -16,16 +16,16 @@
       <div class = "col-md-6">
         <form id = "pizzaOrder">
           <h2>What kind of crust do you want?</h2>
-          <select class="form-control" id="crust">
+          <select class="form-control" id="crustPick">
             <option></option>
-            <option>Thin</option>
-            <option>Stuffed</option>
-            <option>Gluten free</option>
-            <option>Whole Wheat</option>
+            <option>Thin crust</option>
+            <option>Stuffed crust</option>
+            <option>Gluten-free crust</option>
+            <option>Whole Wheat crust</option>
           </select>
 
           <h2>What size do you want?</h2>
-          <select class="form-control" id="size">
+          <select class="form-control" id="sizePick">
             <option></option>
             <option>Small</option>
             <option>Medium</option>
@@ -34,13 +34,14 @@
           </select>
 
           <h2>What topping do you want?</h2>
-          <select class="form-control" id="topping">
+          <select class="form-control" id="toppingPick">
             <option></option>
-            <option>Olives</option>
             <option>Pineapple</option>
-            <option>Pepper</option>
             <option>Pepperoni</option>
+            <option>Peppers</option>
+            <option>Olives</option>
           </select>
+
           <div class = "button">
             <button type= "submit" class="btn">Get your order!</button>
           </div>
@@ -48,17 +49,16 @@
 
 
       </div>
-      <div class="col-md-6">
-        <div id="show-order">
-          <h2>Your Order:</h2>
-          <ul id="orderDetails">
-          </ul>
-          <h2></h2>
+    </div>
+    <div class="col-md-6">
+      <div id="show-order">
+        <h2>Your Order:</h2>
 
-          <div id = "result">
-          </div>
-
+        <div id = "result">
         </div>
+
       </div>
-    </body>
-    </html>
+    </div>
+  </div>
+  </body>
+  </html>
