@@ -10,15 +10,35 @@
   background-image: url("http://lot66.ca/wp-content/uploads/2014/06/pizza.jpg");
   padding-bottom: 200px;
   background-position: center;
+  font-family: 'Amatic SC', cursive;
   color: white;
   font-size: 100px;
+  font-weight: bold;
 }
 
 body {
   background-color: #C0C0C0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
 }
 
 img.menu {
   height: 75px;
   width: 120px;
+}
+
+.refresh {
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.btn-primary {
+  font-size: 40px;
 }
