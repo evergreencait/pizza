@@ -1,14 +1,14 @@
 //business logic
 var toppingArray = ["Bacon", "Pepperoni"];
 var crustArray = ["Gluten-free crust", "Whole Wheat crust"];
-var sizeArray = ["Large", "X-Large"]
-var sauceArray = ["Pesto", "Alfredo"]
+var sizeArray = ["Large Pizza", "X-Large Pizza"]
+var sauceArray = ["Pesto Sauce", "Alfredo Sauce"]
 
 function Pizza(crust, size, sauce, price) {
   this.selectedCrust = crust;
   this.selectedSize = size;
   this.selectedSauce = sauce;
-  this.price = 15;
+  this.price = 16;
 }
 
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(selectedCrust, selectedSize, selectedSauce);
 
-    $("#result").append("Your pizza order is: " + newPizza.fullOrder() + " dollars");
+    $("#result").append("Your pizza order is: " + newPizza.selectedSize + " with " + newPizza.selectedCrust + " and " + newPizza.selectedSauce + " for:  " + newPizza.fullOrder() + " dollars");
 
     $("input#crust").val("");
     $("input#size").val("");
