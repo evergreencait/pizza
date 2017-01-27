@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(selectedCrust, selectedSize, selectedTopping);
 
-    $("#result").append(newPizza.fullOrder());
+    $("#result").append("Your pizza order is: " + newPizza.fullOrder() + " dollars");
 
     $("input#crust").val("");
     $("input#size").val("");
