@@ -14,18 +14,13 @@
   color: white;
   font-size: 100px;
   font-weight: bold;
+  border: 10px double white;
 }
 
 body {
   background-color: #C0C0C0;
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
-}
-
-img.menu {
-  height: 150px;
-  width: 200px;
-  border-radius: 10%
 }
 
 .refresh {
@@ -62,10 +57,15 @@ img {
   width: 300px;
   float: right;
   margin-left: 100%;
+  border: 2px solid white;
 }
 
 #resultimg {
   height: 300px;
   width: 350px;
   margin-right: 40%;
+}
+
+ul {
+  padding-top: 20px;
 }
