@@ -16,7 +16,6 @@
     </div>
 
 <!-- additional costs -->
-    <img src = "img/menu2.jpg" alt = "picture of a menu sign" class="menu">
     <h2>Additional Costs:</h2>
     <ul>
       <li>Gluten-free or Whole wheat crust: 3 dollars more</li>
@@ -36,6 +35,9 @@
             <option>Gluten-free crust</option>
             <option>Whole Wheat crust</option>
           </select>
+        <div class= "pic">
+          <img src="img/dough.jpg" alt="A picture of pizza dough" />
+        </div>
 
           <h2>What size?</h2>
           <select class="form-control" id="sizePick" required>
@@ -46,6 +48,10 @@
             <option>X-Large Pizza</option>
           </select>
 
+          <div class= "pic">
+            <img src="img/size.jpg" alt="A picture of three different pizzas" />
+          </div>
+
           <h2>What kind of sauce?</h2>
           <select class="form-control" id="saucePick" required>
             <option></option>
@@ -55,6 +61,10 @@
             <option>Alfredo Sauce</option>
           </select>
 
+          <div class= "pic">
+            <img src="img/sauce.jpg" alt="A picture of pizza sauce" />
+          </div>
+
           <h2>What toppings?</h2>
           <div class="form-group">
             <input type="checkbox" name="topping" value="Bacon">Bacon<br>
@@ -63,6 +73,11 @@
             <input type="checkbox" name="topping" value="Peppers"> Peppers<br>
             <input type="checkbox" name="topping" value="Pineapple"> Pineapple<br>
           </div>
+
+          <div class= "pic">
+            <img src="img/done.jpg" alt="A picture of pizza" />
+          </div>
+
           <div class = "buttonSubmit">
             <button type= "submit" class="btn btn-primary">Noms!</button>
           </div>
@@ -76,7 +91,7 @@
         <div class="col-md-6">
           <h2>Your Order:</h2>
           <div class = "pizzaImg">
-            <img src= "img/pizzacall.jpg" alt= "Image of pizza batcall">
+            <img src= "img/pizzacall.jpg" alt= "Image of pizza batcall" id="resultimg">
           </div>
           <div class = "refresh">
           </div>

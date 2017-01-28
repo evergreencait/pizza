@@ -58,5 +58,14 @@ h2 {
 
 img {
   border-radius: 30%;
+  height: 250px;
+  width: 300px;
+  float: right;
+  margin-left: 100%;
+}
 
+#resultimg {
+  height: 300px;
+  width: 350px;
+  margin-right: 40%;
 }
