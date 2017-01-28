@@ -17,10 +17,10 @@ _This site allows you to select pizza options that you would like to order. It w
 
 ## Specifications:
 
-*_Site can list options for pizza order: toppings, size, crust._
-*_Site can let user select toppings._
-*_Site had price value associated with certain options._
-*_Site can generate price based on selections._
+* _Site can list options for pizza order: toppings, size, crust._
+* _Site can let user select toppings._
+* _Site had price value associated with certain options._
+* _Site can generate price based on selections._
 
 ## Support and contact details
 
